@@ -50,3 +50,5 @@ Standardization: All inputs are passed through a StandardScaler to ensure the mo
 ⚠️ Medical Disclaimer
 NeuroScan is a research and awareness tool. It is not a certified medical device and is not intended to provide a formal medical diagnosis. All findings should be reviewed by a qualified neurologist.
 <img width="1910" height="922" alt="image" src="https://github.com/user-attachments/assets/cb844575-7469-4d90-9b6d-2afda1ee23f1" />
+<img width="1882" height="912" alt="image" src="https://github.com/user-attachments/assets/4dafa0b7-80a0-47e1-a149-3f96261f21f5" />
+
