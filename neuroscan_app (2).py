@@ -37,10 +37,12 @@ st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&family=DM+Mono:wght@400;500&display=swap');
 
-html,body,[class*="css"]            { font-family:'DM Sans',sans-serif; }
-.main                               { background:#080b12; }
-.block-container                    { padding:2rem 2.5rem 4rem; max-width:1300px; }
-#MainMenu,footer,header             { visibility:hidden; }
+html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
+.main { background:#080b12; }
+.block-container { padding:2rem 2.5rem 4rem; max-width:1300px; }
+#MainMenu { visibility: hidden; }
+footer { visibility: hidden; }
+header[data-testid="stHeader"] { background: rgba(0,0,0,0); }
 section[data-testid="stSidebar"]    { background:#0b0e18; border-right:1px solid #1a1f35; }
 section[data-testid="stSidebar"] *  { color:#c9d1d9 !important; }
 
@@ -338,7 +340,7 @@ if page == "🏠  Home":
         </div>
         <h1 style='font-size:36px;font-weight:800;color:#e6edf3;margin:0 0 16px;line-height:1.3'>
             Know if your brain is safe.<br>
-            <span style='color:#818cf8'>In plain English.</span>
+            <span style='color:#818cf8'>Clear AI Analysis.</span>
         </h1>
         <p style='font-size:16px;color:#9ca3af;max-width:520px;margin:0 auto 28px;line-height:1.8'>
             This tool analyses EEG brain signals using real machine learning
@@ -432,7 +434,7 @@ elif page == "📊  My Results":
     <div class='tip-box'>
         The AI was trained on <b>2,000 normal</b> and <b>500 seizure</b> EEG recordings,
         then tested on <b>500 recordings it had never seen</b>.
-        Here is exactly how well it performed — in plain English:
+        Here is the detailed breakdown of the AI performance:
     </div>""", unsafe_allow_html=True)
 
     metrics = [
@@ -460,7 +462,7 @@ elif page == "📊  My Results":
          "How much better than random chance the AI is. 0 = random guessing. 1 = perfect."),
     ]
 
-    st.markdown("<div class='card'><div class='card-label'>Performance — plain English</div>", unsafe_allow_html=True)
+    st.markdown("<div class='card'><div class='card-label'>Performance — Performance Metrics</div>", unsafe_allow_html=True)
     for name,val,color,tip in metrics:
         pct = round(val*100,1)
         st.markdown(f"""
@@ -572,7 +574,7 @@ elif page == "📊  My Results":
 # ═════════════════════════════════════════════════════════════════════════════
 elif page == "🔬  How the AI works":
 
-    st.markdown("## 🔬 How the AI works — no jargon")
+    st.markdown("## 🔬 How the AI works")
 
     # ── Feature importances ───────────────────────────────────────────────────
     st.markdown("### 🌊 What does the AI actually look at?")
@@ -643,7 +645,7 @@ elif page == "🔬  How the AI works":
     st.pyplot(fig); plt.close(fig)
 
     # ── Frequency band chart ──────────────────────────────────────────────────
-    st.markdown("### 🌈 Normal brain vs. Seizure — side by side")
+    st.markdown("###  Normal brain vs. Seizure — side by side")
     st.markdown("""
     <div class='tip-box'>
         This chart shows the average power of each brain wave frequency band
